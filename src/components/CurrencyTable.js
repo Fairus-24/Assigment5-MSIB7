@@ -24,9 +24,10 @@ const CurrencyTable = () => {
     }, []);
 
     return (
-        <div style={{ backgroundColor: '#FF7F50', padding: '20px', borderRadius: '8px', color: '#fff' }}>
-            <h1>Currency Exchange Rates</h1>
-            <table style={{ width: '100%', color: '#fff' }}>
+        <div style={{ backgroundColor: '#FF7F50', borderRadius: '8px', color: '#fff', height: '100vh', justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+            <div style={{marginBottom: '20px'}}><h1>Currency Exchange Rates</h1></div>
+            <div>
+            <table style={{ width: '100%', color: '#fff', textAlign: 'center', borderSpacing: '10px'}}>
                 <thead>
                     <tr>
                         <th>Currency</th>
@@ -46,9 +47,11 @@ const CurrencyTable = () => {
                     ))}
                 </tbody>
             </table>
+            </div>
+            <div style={{ marginTop: '20px' }}>
             <p style={{ fontSize: '12px', textAlign: 'center', marginTop: '10px' }}>
                 Rates are based from 1 USD. This application uses API from <a href="https://currencyfreaks.com" style={{ color: '#fff' }} target="_blank" rel="noopener noreferrer">CurrencyFreaks</a>.
-            </p>
+            </p></div>
         </div>
     );
 };
