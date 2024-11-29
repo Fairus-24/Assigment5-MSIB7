@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const CurrencyTable = () => {
     const [rates, setRates] = useState([]);
-    const apiKey = '21debe1fbe9b467f90b732f1d6371ee3';
+    const apiKey = 'your-apikey';
 
     useEffect(() => {
         axios.get(`https://api.currencyfreaks.com/latest?apikey=${apiKey}`)
